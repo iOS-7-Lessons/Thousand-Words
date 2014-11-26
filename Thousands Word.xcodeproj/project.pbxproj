@@ -139,13 +139,13 @@
 		FAD2285E1A2344E700251EF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA93D9181A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld */,
 				FAD555971A238DA5000F9EE7 /* PhotoCollectionViewCell.h */,
 				FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */,
 				FAD982571A231805005428AB /* CoreDataHelper.h */,
 				FAD982581A231805005428AB /* CoreDataHelper.m */,
 				FAD06B1E1A213656002D46E1 /* Album.h */,
 				FAD06B1F1A213656002D46E1 /* Album.m */,
+				FA93D9181A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "Thousands Word-Prefix.pch";
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -418,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "Thousands Word-Prefix.pch";
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

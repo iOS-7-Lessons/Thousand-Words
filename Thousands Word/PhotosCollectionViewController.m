@@ -15,7 +15,7 @@
 
 @implementation PhotosCollectionViewController
 
-static NSString * const reuseIdentifier = @"PhotoCell";
+static NSString * const reuseIdentifier = @"Photo Cell2";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -49,7 +49,6 @@ static NSString * const reuseIdentifier = @"PhotoCell";
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 5;

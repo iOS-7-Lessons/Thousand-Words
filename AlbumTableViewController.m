@@ -37,9 +37,6 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
     
-//    id delegate = [[UIApplication sharedApplication] delegate];
-//    NSManagedObjectContext *context = [delegate managedObjectContext];
-    
     NSError *error = nil;
     NSArray *fetchedAlbums = [[CoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     
@@ -111,7 +108,7 @@
     // Configure the cell...
     
     Album *album = self.albums[indexPath.row];
-    cell.textLabel.text = album.name;
+    if (album) cell.textLabel.text = album.name;
     
     return cell;
 }

@@ -11,5 +11,5 @@
 @interface CoreDataHelper : NSObject
 
 + (NSManagedObjectContext *)managedObjectContext;
-
++ (void)deleteAlbumData:(NSArray *)album;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataHelper.h"
+#import "Album.h"
 
 @implementation CoreDataHelper
 
@@ -20,6 +21,20 @@
     }
     
     return context;
+}
+
+
++ (void) deleteAlbumData:(NSArray *)albums
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    for (Album *album in albums) {
+        [context deleteObject:album];
+    }
+    
+    NSError *error;
+    if ([context save:&error]) {
+        NSLog(@"Error occure when saving");
+    }
 }
 
 @end
