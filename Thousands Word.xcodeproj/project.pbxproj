@@ -47,7 +47,7 @@
 		FA93D92A1A1FEC9A006BD92C /* Thousands WordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thousands WordTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93D92F1A1FEC9A006BD92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousands_WordTests.m; sourceTree = "<group>"; };
-		FAC826621A252530002A09F3 /* Thousands Word-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thousands Word-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		FAC826621A252530002A09F3 /* Thousands Word-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Thousands Word-Prefix.pch"; path = "../Thousands Word-Prefix.pch"; sourceTree = "<group>"; };
 		FAD06B1E1A213656002D46E1 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		FAD06B1F1A213656002D46E1 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
@@ -407,7 +407,7 @@
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Thousands Word";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -420,7 +420,7 @@
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Thousands Word";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -439,7 +439,7 @@
 				);
 				INFOPLIST_FILE = "Thousands WordTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Thousands WordTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thousands Word.app/Thousands Word";
 			};
 			name = Debug;
@@ -454,7 +454,7 @@
 				);
 				INFOPLIST_FILE = "Thousands WordTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Thousands WordTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thousands Word.app/Thousands Word";
 			};
 			name = Release;

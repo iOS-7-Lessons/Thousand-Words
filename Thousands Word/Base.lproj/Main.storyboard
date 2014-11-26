@@ -55,7 +55,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Photo Cell2" id="Gw3-fX-OlE" customClass="PhotoCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Photo Cell" id="Gw3-fX-OlE" customClass="PhotoCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -70,12 +70,18 @@
                             <outlet property="delegate" destination="JZJ-bw-mIX" id="Vq5-wJ-Nmo"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="iO6-hH-6cq"/>
+                    <navigationItem key="navigationItem" id="iO6-hH-6cq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="OwX-t7-WDr">
+                            <connections>
+                                <action selector="cameraBarButtonPressed:" destination="JZJ-bw-mIX" id="Vn1-q9-k5s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryw-SD-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="350"/>
+            <point key="canvasLocation" x="2654" y="350"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tya-yJ-zs2">

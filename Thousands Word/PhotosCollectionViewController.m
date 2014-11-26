@@ -9,13 +9,14 @@
 #import "PhotosCollectionViewController.h"
 #import "PhotoCollectionViewCell.h"
 
-@interface PhotosCollectionViewController ()
-
+@interface PhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) NSMutableArray *photos;
 @end
 
 @implementation PhotosCollectionViewController
 
-static NSString * const reuseIdentifier = @"Photo Cell2";
+// Not: static degiskenin memory locationını sabitliyor.
+static NSString * const reuseIdentifier = @"Photo Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +33,48 @@ static NSString * const reuseIdentifier = @"Photo Cell2";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Lazy instantiations
+- (NSMutableArray *)photos
+{
+    if (!_photos) {
+        _photos = [[NSMutableArray alloc] init];
+    }
+    
+    return _photos;
+}
+
+#pragma mark - IBActions
+- (IBAction)cameraBarButtonPressed:(UIBarButtonItem *)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"Picked");
+    UIImage *pickedImage = info[UIImagePickerControllerEditedImage];
+    if (!pickedImage) pickedImage = info[UIImagePickerControllerOriginalImage];
+    [self.photos addObject:pickedImage];
+    [self.collectionView reloadData];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"Cancelled");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
@@ -51,7 +94,7 @@ static NSString * const reuseIdentifier = @"Photo Cell2";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return [self.photos count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +103,7 @@ static NSString * const reuseIdentifier = @"Photo Cell2";
     
     // Configure the cell
     photoCell.backgroundColor = [UIColor whiteColor];
-    photoCell.imageView.image = [UIImage imageNamed:@"astronaut.jpg"];
+    photoCell.imageView.image = self.photos[indexPath.row];
     
     return photoCell;
 }
