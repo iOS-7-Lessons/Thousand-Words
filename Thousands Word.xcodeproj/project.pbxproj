@@ -20,6 +20,8 @@
 		FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */; };
 		FAD5559B1A239102000F9EE7 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAD5559A1A239102000F9EE7 /* astronaut.jpg */; };
 		FAD982591A231805005428AB /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD982581A231805005428AB /* CoreDataHelper.m */; };
+		FAE3A7BA1A271BA80032DD5D /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7B91A271BA80032DD5D /* Photo.m */; };
+		FAE3A7BD1A271C850032DD5D /* PictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		FAD5559A1A239102000F9EE7 /* astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut.jpg; sourceTree = "<group>"; };
 		FAD982571A231805005428AB /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataHelper.h; path = ../CoreDataHelper.h; sourceTree = "<group>"; };
 		FAD982581A231805005428AB /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = ../CoreDataHelper.m; sourceTree = "<group>"; };
+		FAE3A7B81A271BA80032DD5D /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		FAE3A7B91A271BA80032DD5D /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		FAE3A7BB1A271C850032DD5D /* PictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDataTransformer.h; sourceTree = "<group>"; };
+		FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDataTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +145,11 @@
 		FAD2285E1A2344E700251EF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3A7B71A271A870032DD5D /* CoreData */,
 				FAD555971A238DA5000F9EE7 /* PhotoCollectionViewCell.h */,
 				FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */,
 				FAD982571A231805005428AB /* CoreDataHelper.h */,
 				FAD982581A231805005428AB /* CoreDataHelper.m */,
-				FAD06B1E1A213656002D46E1 /* Album.h */,
-				FAD06B1F1A213656002D46E1 /* Album.m */,
-				FA93D9181A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -169,6 +173,20 @@
 				FA93D9231A1FEC9A006BD92C /* LaunchScreen.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		FAE3A7B71A271A870032DD5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FA93D9181A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld */,
+				FAD06B1E1A213656002D46E1 /* Album.h */,
+				FAD06B1F1A213656002D46E1 /* Album.m */,
+				FAE3A7B81A271BA80032DD5D /* Photo.h */,
+				FAE3A7B91A271BA80032DD5D /* Photo.m */,
+				FAE3A7BB1A271C850032DD5D /* PictureDataTransformer.h */,
+				FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE3A7BD1A271C850032DD5D /* PictureDataTransformer.m in Sources */,
 				FAD982591A231805005428AB /* CoreDataHelper.m in Sources */,
 				FA93D9171A1FEC9A006BD92C /* AppDelegate.m in Sources */,
 				FA726D781A20DA3100A6935D /* AlbumTableViewController.m in Sources */,
+				FAE3A7BA1A271BA80032DD5D /* Photo.m in Sources */,
 				FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */,
 				FA93D91A1A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld in Sources */,
 				FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */,
