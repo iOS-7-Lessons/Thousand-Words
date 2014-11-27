@@ -15,13 +15,13 @@
 		FA93D9221A1FEC9A006BD92C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93D9211A1FEC9A006BD92C /* Images.xcassets */; };
 		FA93D9251A1FEC9A006BD92C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93D9231A1FEC9A006BD92C /* LaunchScreen.xib */; };
 		FA93D9311A1FEC9A006BD92C /* Thousands_WordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */; };
-		FAD06B201A213656002D46E1 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD06B1F1A213656002D46E1 /* Album.m */; };
 		FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */; };
 		FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */; };
 		FAD5559B1A239102000F9EE7 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAD5559A1A239102000F9EE7 /* astronaut.jpg */; };
 		FAD982591A231805005428AB /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD982581A231805005428AB /* CoreDataHelper.m */; };
-		FAE3A7BA1A271BA80032DD5D /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7B91A271BA80032DD5D /* Photo.m */; };
 		FAE3A7BD1A271C850032DD5D /* PictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */; };
+		FAE3A7C01A27364A0032DD5D /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7BF1A27364A0032DD5D /* Album.m */; };
+		FAE3A7C31A27364A0032DD5D /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3A7C21A27364A0032DD5D /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 		FA93D92F1A1FEC9A006BD92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousands_WordTests.m; sourceTree = "<group>"; };
 		FAC826621A252530002A09F3 /* Thousands Word-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Thousands Word-Prefix.pch"; path = "../Thousands Word-Prefix.pch"; sourceTree = "<group>"; };
-		FAD06B1E1A213656002D46E1 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
-		FAD06B1F1A213656002D46E1 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
 		FAD555971A238DA5000F9EE7 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCollectionViewCell.h; path = ../PhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -59,10 +57,12 @@
 		FAD5559A1A239102000F9EE7 /* astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut.jpg; sourceTree = "<group>"; };
 		FAD982571A231805005428AB /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataHelper.h; path = ../CoreDataHelper.h; sourceTree = "<group>"; };
 		FAD982581A231805005428AB /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = ../CoreDataHelper.m; sourceTree = "<group>"; };
-		FAE3A7B81A271BA80032DD5D /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		FAE3A7B91A271BA80032DD5D /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		FAE3A7BB1A271C850032DD5D /* PictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDataTransformer.h; sourceTree = "<group>"; };
 		FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDataTransformer.m; sourceTree = "<group>"; };
+		FAE3A7BE1A27364A0032DD5D /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = ../Album.h; sourceTree = "<group>"; };
+		FAE3A7BF1A27364A0032DD5D /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
+		FAE3A7C11A27364A0032DD5D /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = ../Photo.h; sourceTree = "<group>"; };
+		FAE3A7C21A27364A0032DD5D /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = ../Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,11 +178,11 @@
 		FAE3A7B71A271A870032DD5D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3A7C11A27364A0032DD5D /* Photo.h */,
+				FAE3A7C21A27364A0032DD5D /* Photo.m */,
+				FAE3A7BE1A27364A0032DD5D /* Album.h */,
+				FAE3A7BF1A27364A0032DD5D /* Album.m */,
 				FA93D9181A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld */,
-				FAD06B1E1A213656002D46E1 /* Album.h */,
-				FAD06B1F1A213656002D46E1 /* Album.m */,
-				FAE3A7B81A271BA80032DD5D /* Photo.h */,
-				FAE3A7B91A271BA80032DD5D /* Photo.m */,
 				FAE3A7BB1A271C850032DD5D /* PictureDataTransformer.h */,
 				FAE3A7BC1A271C850032DD5D /* PictureDataTransformer.m */,
 			);
@@ -294,11 +294,11 @@
 				FAD982591A231805005428AB /* CoreDataHelper.m in Sources */,
 				FA93D9171A1FEC9A006BD92C /* AppDelegate.m in Sources */,
 				FA726D781A20DA3100A6935D /* AlbumTableViewController.m in Sources */,
-				FAE3A7BA1A271BA80032DD5D /* Photo.m in Sources */,
 				FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */,
 				FA93D91A1A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld in Sources */,
+				FAE3A7C01A27364A0032DD5D /* Album.m in Sources */,
 				FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */,
-				FAD06B201A213656002D46E1 /* Album.m in Sources */,
+				FAE3A7C31A27364A0032DD5D /* Photo.m in Sources */,
 				FA93D9141A1FEC9A006BD92C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

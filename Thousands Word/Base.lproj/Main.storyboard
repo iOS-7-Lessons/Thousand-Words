@@ -19,7 +19,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JZJ-bw-mIX" kind="push" id="1Ih-L4-3ni"/>
+                                    <segue destination="JZJ-bw-mIX" kind="show" identifier="toCollectionViewControllerSegue" id="1Ih-L4-3ni"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

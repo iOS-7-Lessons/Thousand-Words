@@ -9,18 +9,13 @@
 #import "AlbumTableViewController.h"
 #import "Album.h"
 #import "CoreDataHelper.h"
+#import "PhotosCollectionViewController.h"
 
 @interface AlbumTableViewController () <UIAlertViewDelegate>
 
 @end
 
 @implementation AlbumTableViewController
-
-- (NSMutableArray *)albums
-{
-    if ( !_albums ) _albums = [[NSMutableArray alloc] init];
-    return _albums;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +44,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Lazy instantiations
+
+- (NSMutableArray *)albums
+{
+    if ( !_albums ) _albums = [[NSMutableArray alloc] init];
+    return _albums;
 }
 
 #pragma mark - IBActions
@@ -147,14 +150,23 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toCollectionViewControllerSegue"]) {
+        if ([[segue destinationViewController] isKindOfClass:[PhotosCollectionViewController class]]) {
+            
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            
+            PhotosCollectionViewController *targetController = segue.destinationViewController;
+            targetController.album = self.albums[indexPath.row];
+        }
+    }
 }
-*/
+
 
 @end

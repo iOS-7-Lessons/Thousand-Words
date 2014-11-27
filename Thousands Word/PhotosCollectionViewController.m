@@ -8,6 +8,8 @@
 
 #import "PhotosCollectionViewController.h"
 #import "PhotoCollectionViewCell.h"
+#import "Photo.h"
+#import "CoreDataHelper.h"
 
 @interface PhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *photos;
@@ -28,6 +30,10 @@ static NSString * const reuseIdentifier = @"Photo Cell";
     [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    NSSet *unorderedPhotos = self.album.photos;
+    NSSortDescriptor *sortByDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[sortByDateDescriptor]];
+    self.photos = [sortedPhotos mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +52,7 @@ static NSString * const reuseIdentifier = @"Photo Cell";
 }
 
 #pragma mark - IBActions
+
 - (IBAction)cameraBarButtonPressed:(UIBarButtonItem *)sender {
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     
@@ -66,7 +73,7 @@ static NSString * const reuseIdentifier = @"Photo Cell";
     NSLog(@"Picked");
     UIImage *pickedImage = info[UIImagePickerControllerEditedImage];
     if (!pickedImage) pickedImage = info[UIImagePickerControllerOriginalImage];
-    [self.photos addObject:pickedImage];
+    [self.photos addObject:[self photoFromImage:pickedImage]];
     [self.collectionView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -75,6 +82,23 @@ static NSString * const reuseIdentifier = @"Photo Cell";
 {
     NSLog(@"Cancelled");
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Helper Methods
+
+- (Photo *)photoFromImage:(UIImage *)image {
+    
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[CoreDataHelper managedObjectContext]];
+    photo.date = [NSDate date];
+    photo.image = image;
+    photo.albumBook = self.album;
+    
+    NSError *error = nil;
+    if ([[photo managedObjectContext] save:&error]) {
+        NSLog(@"Error saving photo %@", error);
+    }
+    
+    return photo;
 }
 
 /*
@@ -89,7 +113,8 @@ static NSString * const reuseIdentifier = @"Photo Cell";
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 1;
 }
 
@@ -103,7 +128,9 @@ static NSString * const reuseIdentifier = @"Photo Cell";
     
     // Configure the cell
     photoCell.backgroundColor = [UIColor whiteColor];
-    photoCell.imageView.image = self.photos[indexPath.row];
+    
+    Photo *photo = self.photos[indexPath.row];
+    photoCell.imageView.image = photo.image;
     
     return photoCell;
 }
