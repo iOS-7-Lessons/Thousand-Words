@@ -87,7 +87,7 @@
     album.date = [NSDate date];
     
     NSError *error;
-    if ([context save:&error]) {
+    if (![context save:&error]) {
         // Handle the error
         NSLog(@"Error occured %@", error);
     }

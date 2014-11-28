@@ -15,6 +15,7 @@
 		FA93D9221A1FEC9A006BD92C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93D9211A1FEC9A006BD92C /* Images.xcassets */; };
 		FA93D9251A1FEC9A006BD92C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93D9231A1FEC9A006BD92C /* LaunchScreen.xib */; };
 		FA93D9311A1FEC9A006BD92C /* Thousands_WordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */; };
+		FACDCF2D1A2881AA00274C2C /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */; };
 		FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */; };
 		FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */; };
 		FAD5559B1A239102000F9EE7 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAD5559A1A239102000F9EE7 /* astronaut.jpg */; };
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		FA726D761A20DA3100A6935D /* AlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumTableViewController.h; path = ../AlbumTableViewController.h; sourceTree = "<group>"; };
 		FA726D771A20DA3100A6935D /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumTableViewController.m; path = ../AlbumTableViewController.m; sourceTree = "<group>"; };
-		FA93D90E1A1FEC9A006BD92C /* Thousands Word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thousands Word.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA93D90E1A1FEC9A006BD92C /* Thousand Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thousand Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93D9121A1FEC9A006BD92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA93D9131A1FEC9A006BD92C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA93D9151A1FEC9A006BD92C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,10 +47,12 @@
 		FA93D91F1A1FEC9A006BD92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA93D9211A1FEC9A006BD92C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA93D9241A1FEC9A006BD92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FA93D92A1A1FEC9A006BD92C /* Thousands WordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thousands WordTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA93D92A1A1FEC9A006BD92C /* Thousand WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thousand WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93D92F1A1FEC9A006BD92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousands_WordTests.m; sourceTree = "<group>"; };
-		FAC826621A252530002A09F3 /* Thousands Word-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Thousands Word-Prefix.pch"; path = "../Thousands Word-Prefix.pch"; sourceTree = "<group>"; };
+		FAC826621A252530002A09F3 /* Thousand Words-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Thousand Words-Prefix.pch"; path = "../Thousand Words-Prefix.pch"; sourceTree = "<group>"; };
+		FACDCF2B1A2881AA00274C2C /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
 		FAD555971A238DA5000F9EE7 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCollectionViewCell.h; path = ../PhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -95,8 +98,8 @@
 		FA93D90F1A1FEC9A006BD92C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA93D90E1A1FEC9A006BD92C /* Thousands Word.app */,
-				FA93D92A1A1FEC9A006BD92C /* Thousands WordTests.xctest */,
+				FA93D90E1A1FEC9A006BD92C /* Thousand Words.app */,
+				FA93D92A1A1FEC9A006BD92C /* Thousand WordsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +123,7 @@
 				FA93D9161A1FEC9A006BD92C /* AppDelegate.m */,
 				FA93D9121A1FEC9A006BD92C /* Info.plist */,
 				FA93D9131A1FEC9A006BD92C /* main.m */,
-				FAC826621A252530002A09F3 /* Thousands Word-Prefix.pch */,
+				FAC826621A252530002A09F3 /* Thousand Words-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,10 +160,12 @@
 		FAD228621A234BFD00251EF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA726D761A20DA3100A6935D /* AlbumTableViewController.h */,
-				FA726D771A20DA3100A6935D /* AlbumTableViewController.m */,
+				FACDCF2B1A2881AA00274C2C /* PhotoDetailViewController.h */,
+				FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */,
 				FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */,
 				FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */,
+				FA726D761A20DA3100A6935D /* AlbumTableViewController.h */,
+				FA726D771A20DA3100A6935D /* AlbumTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,9 +197,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA93D90D1A1FEC9A006BD92C /* Thousands Word */ = {
+		FA93D90D1A1FEC9A006BD92C /* Thousand Words */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA93D9341A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousands Word" */;
+			buildConfigurationList = FA93D9341A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousand Words" */;
 			buildPhases = (
 				FA93D90A1A1FEC9A006BD92C /* Sources */,
 				FA93D90B1A1FEC9A006BD92C /* Frameworks */,
@@ -204,14 +209,14 @@
 			);
 			dependencies = (
 			);
-			name = "Thousands Word";
+			name = "Thousand Words";
 			productName = "Thousands Word";
-			productReference = FA93D90E1A1FEC9A006BD92C /* Thousands Word.app */;
+			productReference = FA93D90E1A1FEC9A006BD92C /* Thousand Words.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA93D9291A1FEC9A006BD92C /* Thousands WordTests */ = {
+		FA93D9291A1FEC9A006BD92C /* Thousand WordsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA93D9371A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousands WordTests" */;
+			buildConfigurationList = FA93D9371A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */;
 			buildPhases = (
 				FA93D9261A1FEC9A006BD92C /* Sources */,
 				FA93D9271A1FEC9A006BD92C /* Frameworks */,
@@ -222,9 +227,9 @@
 			dependencies = (
 				FA93D92C1A1FEC9A006BD92C /* PBXTargetDependency */,
 			);
-			name = "Thousands WordTests";
+			name = "Thousand WordsTests";
 			productName = "Thousands WordTests";
-			productReference = FA93D92A1A1FEC9A006BD92C /* Thousands WordTests.xctest */;
+			productReference = FA93D92A1A1FEC9A006BD92C /* Thousand WordsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +250,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA93D9091A1FEC9A006BD92C /* Build configuration list for PBXProject "Thousands Word" */;
+			buildConfigurationList = FA93D9091A1FEC9A006BD92C /* Build configuration list for PBXProject "Thousand Words" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,8 +263,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA93D90D1A1FEC9A006BD92C /* Thousands Word */,
-				FA93D9291A1FEC9A006BD92C /* Thousands WordTests */,
+				FA93D90D1A1FEC9A006BD92C /* Thousand Words */,
+				FA93D9291A1FEC9A006BD92C /* Thousand WordsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE3A7BD1A271C850032DD5D /* PictureDataTransformer.m in Sources */,
+				FACDCF2D1A2881AA00274C2C /* PhotoDetailViewController.m in Sources */,
 				FAD982591A231805005428AB /* CoreDataHelper.m in Sources */,
 				FA93D9171A1FEC9A006BD92C /* AppDelegate.m in Sources */,
 				FA726D781A20DA3100A6935D /* AlbumTableViewController.m in Sources */,
@@ -316,7 +322,7 @@
 /* Begin PBXTargetDependency section */
 		FA93D92C1A1FEC9A006BD92C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA93D90D1A1FEC9A006BD92C /* Thousands Word */;
+			target = FA93D90D1A1FEC9A006BD92C /* Thousand Words */;
 			targetProxy = FA93D92B1A1FEC9A006BD92C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,11 +429,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "Thousands Word-Prefix.pch";
+				GCC_PREFIX_HEADER = "Thousand Words-Prefix.pch";
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Thousands Word";
+				PRODUCT_NAME = "Thousand Words";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -436,11 +442,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "Thousands Word-Prefix.pch";
+				GCC_PREFIX_HEADER = "Thousand Words-Prefix.pch";
 				INFOPLIST_FILE = "Thousands Word/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Thousands Word";
+				PRODUCT_NAME = "Thousand Words";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -459,7 +465,7 @@
 				);
 				INFOPLIST_FILE = "Thousands WordTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "Thousands WordTests";
+				PRODUCT_NAME = "Thousand WordsTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thousands Word.app/Thousands Word";
 			};
 			name = Debug;
@@ -474,7 +480,7 @@
 				);
 				INFOPLIST_FILE = "Thousands WordTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "Thousands WordTests";
+				PRODUCT_NAME = "Thousand WordsTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thousands Word.app/Thousands Word";
 			};
 			name = Release;
@@ -482,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA93D9091A1FEC9A006BD92C /* Build configuration list for PBXProject "Thousands Word" */ = {
+		FA93D9091A1FEC9A006BD92C /* Build configuration list for PBXProject "Thousand Words" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA93D9321A1FEC9A006BD92C /* Debug */,
@@ -491,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA93D9341A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousands Word" */ = {
+		FA93D9341A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousand Words" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA93D9351A1FEC9A006BD92C /* Debug */,
@@ -500,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA93D9371A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousands WordTests" */ = {
+		FA93D9371A1FEC9A006BD92C /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA93D9381A1FEC9A006BD92C /* Debug */,

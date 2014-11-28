@@ -23,7 +23,6 @@
     return context;
 }
 
-
 + (void) deleteAlbumData:(NSArray *)albums
 {
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -32,7 +31,7 @@
     }
     
     NSError *error;
-    if ([context save:&error]) {
+    if ( ![context save:&error] ) {
         NSLog(@"Error occure when saving");
     }
 }

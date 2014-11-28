@@ -10,8 +10,9 @@
 #import "PhotoCollectionViewCell.h"
 #import "Photo.h"
 #import "CoreDataHelper.h"
+#import "PhotoDetailViewController.h"
 
-@interface PhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate>
 @property (strong, nonatomic) NSMutableArray *photos;
 @end
 
@@ -30,10 +31,16 @@ static NSString * const reuseIdentifier = @"Photo Cell";
     [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     NSSet *unorderedPhotos = self.album.photos;
     NSSortDescriptor *sortByDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[sortByDateDescriptor]];
     self.photos = [sortedPhotos mutableCopy];
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,22 +101,25 @@ static NSString * const reuseIdentifier = @"Photo Cell";
     photo.albumBook = self.album;
     
     NSError *error = nil;
-    if ([[photo managedObjectContext] save:&error]) {
+    if ( ![[photo managedObjectContext] save:&error] ) {
         NSLog(@"Error saving photo %@", error);
     }
     
     return photo;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.destinationViewController isKindOfClass:[PhotoDetailViewController class]]) {
+        PhotoDetailViewController *targetVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+        targetVC.photo = self.photos[indexPath.row];
+    }
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -136,6 +146,12 @@ static NSString * const reuseIdentifier = @"Photo Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *segueIdentifier = @"toPhotoDetailViewController";
+    [self performSegueWithIdentifier:segueIdentifier sender:self];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

@@ -63,6 +63,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="QAg-x7-XlZ" kind="show" identifier="toPhotoDetailViewController" id="eFw-nc-a2S"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -82,6 +85,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryw-SD-oEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2654" y="350"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="gtH-cX-v02">
+            <objects>
+                <viewController id="QAg-x7-XlZ" customClass="PhotoDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0d3-gb-Vsr"/>
+                        <viewControllerLayoutGuide type="bottom" id="07c-hC-e10"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSO-gC-dh4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-sP-QzU">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-vK-HOC">
+                                <rect key="frame" x="16" y="518" width="46" height="30"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="QAg-x7-XlZ" eventType="touchUpInside" id="4SN-KV-GpB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Gw-dWF">
+                                <rect key="frame" x="258" y="518" width="46" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="QAg-x7-XlZ" eventType="touchUpInside" id="S5n-vf-AXa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XNN-yI-vE8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="K9a-sP-QzU" id="miT-tD-ggn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mV-sg-8iS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="350"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tya-yJ-zs2">
