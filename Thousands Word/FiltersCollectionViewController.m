@@ -118,7 +118,15 @@ static NSString * const reuseIdentifier = @"Filter Cell";
     
     // Configure the cell
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+    
+    dispatch_queue_t filterQueue = dispatch_queue_create("com.thousandwords.filter", NULL);
+    
+    dispatch_async(filterQueue, ^{
+        UIImage *filteredImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.imageView.image = filteredImage;
+        });
+    });
     
     return cell;
 }
