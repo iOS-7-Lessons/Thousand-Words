@@ -16,6 +16,7 @@
 		FA93D9251A1FEC9A006BD92C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93D9231A1FEC9A006BD92C /* LaunchScreen.xib */; };
 		FA93D9311A1FEC9A006BD92C /* Thousands_WordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93D9301A1FEC9A006BD92C /* Thousands_WordTests.m */; };
 		FACDCF2D1A2881AA00274C2C /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */; };
+		FACDCF301A28B4C500274C2C /* FiltersCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACDCF2F1A28B4C500274C2C /* FiltersCollectionViewController.m */; };
 		FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */; };
 		FAD555991A238DA5000F9EE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD555981A238DA5000F9EE7 /* PhotoCollectionViewCell.m */; };
 		FAD5559B1A239102000F9EE7 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAD5559A1A239102000F9EE7 /* astronaut.jpg */; };
@@ -53,6 +54,8 @@
 		FAC826621A252530002A09F3 /* Thousand Words-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Thousand Words-Prefix.pch"; path = "../Thousand Words-Prefix.pch"; sourceTree = "<group>"; };
 		FACDCF2B1A2881AA00274C2C /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		FACDCF2E1A28B4C500274C2C /* FiltersCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersCollectionViewController.h; sourceTree = "<group>"; };
+		FACDCF2F1A28B4C500274C2C /* FiltersCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersCollectionViewController.m; sourceTree = "<group>"; };
 		FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		FAD228601A234BED00251EF3 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
 		FAD555971A238DA5000F9EE7 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCollectionViewCell.h; path = ../PhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 		FAD228621A234BFD00251EF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACDCF2E1A28B4C500274C2C /* FiltersCollectionViewController.h */,
+				FACDCF2F1A28B4C500274C2C /* FiltersCollectionViewController.m */,
 				FACDCF2B1A2881AA00274C2C /* PhotoDetailViewController.h */,
 				FACDCF2C1A2881AA00274C2C /* PhotoDetailViewController.m */,
 				FAD2285F1A234BED00251EF3 /* PhotosCollectionViewController.h */,
@@ -299,6 +304,7 @@
 				FACDCF2D1A2881AA00274C2C /* PhotoDetailViewController.m in Sources */,
 				FAD982591A231805005428AB /* CoreDataHelper.m in Sources */,
 				FA93D9171A1FEC9A006BD92C /* AppDelegate.m in Sources */,
+				FACDCF301A28B4C500274C2C /* FiltersCollectionViewController.m in Sources */,
 				FA726D781A20DA3100A6935D /* AlbumTableViewController.m in Sources */,
 				FAD228611A234BED00251EF3 /* PhotosCollectionViewController.m in Sources */,
 				FA93D91A1A1FEC9A006BD92C /* Thousands_Word.xcdatamodeld in Sources */,
